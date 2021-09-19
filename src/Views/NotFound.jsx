@@ -10,7 +10,7 @@ const NotFound = () => {
         <div className="error">
             <h1>Error</h1>
             <p>No se puede acceder a esta página web.</p>
-            <p>Comprueba si nombre hay un error de escritura  </p>
+            <p>Comprueba si no hay un error de escritura  </p>
             <Link to="/">Inicio</Link>
         </div>
     )

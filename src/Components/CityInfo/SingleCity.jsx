@@ -18,7 +18,7 @@ const SingleCity = ({name, flag, capital, region, data, demonym}) => {
         <p>Idioma: {data[0].languages[0].name}</p>
         <p>Etnia: {demonym}</p>
         <Link to="/">Inicio</Link>
-        <Link to={`/city/${capital}`}>Clima</Link>
+        <Link to={`/weather/${capital}`}>Clima</Link>
         </div>
         </div>
         </>

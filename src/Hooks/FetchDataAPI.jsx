@@ -13,7 +13,7 @@ const FetchDataAPI = (url, setLoader) => {
       setData(result);
       setTimeout(() => {
         setLoader(false);
-      }, 2000);
+      }, 500);
       
     } catch (error) {
       setLoader(false);

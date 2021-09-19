@@ -11,6 +11,7 @@ const SearchForm = () => {
     const handleFetchData = async () => {
         const response = await fetch( `https://restcountries.eu/rest/v2/name/${name}?fullText=true`);
         const result = await response.json();
+        console.log(result);
     }
   return (
     <div className="form">

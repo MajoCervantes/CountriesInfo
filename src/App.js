@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import Home from "./Views/Home.jsx";
 import CityInfo from "./Views/CityInfo.jsx";
 import NotFound from "./Views/NotFound.jsx";
+import WeatherInfo from "./Views/WeatherInfo.jsx";
 
 const App =() => {
   return (
@@ -17,10 +18,14 @@ const App =() => {
         <Route path="/city/:name" exact>
           <CityInfo />
         </Route>
-        
+
+        <Route path="/weather/:capital" exact>
+          <WeatherInfo />
+        </Route>
+
         <Route path="*">
           <NotFound />
-        </Route>
+        </Route>        
 
       </Switch>
     </BrowserRouter>

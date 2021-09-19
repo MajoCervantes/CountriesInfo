@@ -11,13 +11,14 @@ const Home = () => {
   const [loader, setLoader] = useState(false);
 
     const { data} = FetchDataAPI("https://restcountries.eu/rest/v2/all", setLoader);
-    let countries10 = data.splice(0, 10);
+    console.log(data);
+
 
     return (
         <>
         {loader ? <Loader /> :  ( <div>
           <SearchForm/>
-          {countries10.map(Country => (
+          {data.map(Country => (
             <AllCountries
               key={Country.name}
               flag={Country.flag}

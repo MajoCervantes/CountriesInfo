@@ -16,30 +16,29 @@
 }
 
 .single-city h1 {
-    color: #152D35;
+    color: #EEEEEE;
 }
 
 .single-city p {
-    color: #345B63;
+    color: #EEEEEE;
     font-weight: bold;
 }
 
 .single-city a {
-    color: #152D35;
+    border: 1px solid #FFD369;
+    border-radius: 5px;
+    color: #EEEEEE;
+    background-color: #393E46;
+    padding: 10px 20px;
+    text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    text-decoration: none;
-    border: 1px solid #152D35;
-    border-radius: 5px;
-    padding: 15px 30px;
-    margin-top: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s all ease;
 }
 
 .single-city a:hover {
-    color: #506D84;
-    background-color: #112031;
-    transition: 0.3s all ease;
+    color: #393E46;
+    background-color: #EEEEEE;
 }
 
 .info {

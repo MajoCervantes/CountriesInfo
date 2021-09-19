@@ -2,36 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #EEEEEE;
-}
+    background-color: rgba(34, 40, 49, 0.20);
+}   
 
 .flag {
-    width: 45%;
-    margin: auto;
+    width: 40%;
+    margin: 30px 65px;
+    display: inline-block;
     text-align: center;
     padding: 20px;
 }
 
 .flag img {
     max-width: 80%;
+    height: 300px;
     display: inline;
+    margin-bottom: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .complements {
-    width: 45%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #393E46;
 }
 
 .complements h2 {
-    font-size: 1.rem;   
+    font-size: 1.2rem; 
+    font-weight: bold;  
     display: inline;
     margin: 10px 20px;
-    color: #222831;
+    color: #EEEEEE;
 }
 
 .complements a {
