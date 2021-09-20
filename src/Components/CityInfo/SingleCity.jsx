@@ -13,12 +13,15 @@ const SingleCity = ({name, flag, capital, region, data, demonym}) => {
         <img src={flag} alt={name}></img>
         <h1>Nombre: {name}</h1>
         <div className="info">
-        <p>Capital: {capital}</p>
+        {capital === "" ? <p>Capital: Sin capital</p> :
+        <p>Capital: {capital}</p>}
         <p>Región: {region}</p>
         <p>Idioma: {data[0].languages[0].name}</p>
-        <p>Etnia: {demonym}</p>
+        {demonym === "" ? <p>Etnia: Sin etnia</p> :
+        <p>Etnia: {demonym}</p>}
         <Link to="/">Inicio</Link>
-        <Link to={`/weather/${capital}`}>Clima</Link>
+        {capital === "" ? null :
+        <Link to={`/weather/${capital}`}>Clima</Link>}
         </div>
         </div>
         </>

@@ -16,8 +16,8 @@ const CityWeather = ({name, description, temp, tempMax, tempMin, humidity, windS
          <img src={flag} alt={name}></img>  
         <div className="main-container"> 
            <h1>Capital: {name}</h1>
-           <p>Sky: {description}</p>
            <img src= {`http://openweathermap.org/img/wn/${icon}@2x.png`} alt={icon}></img>
+           <p>Sky: {description}</p>
            <p>Temperature: {tempToCelsius}°</p>
            <p>Max Temperature: {tempMaxToCelsius}°</p>
            <p>Min Temperature: {tempMinToCelsius}°</p>

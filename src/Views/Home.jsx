@@ -2,6 +2,8 @@ import React, {useState} from "react";
 
 //CustomHook
 import FetchDataAPI from "../Hooks/FetchDataAPI";
+
+//Components
 import SearchForm from "../Components/Home/SearchForm";
 import AllCountries from "../Components/Home/AllCountries";
 import Loader from "./Loader";
@@ -10,9 +12,8 @@ import Loader from "./Loader";
 const Home = () => {
   const [loader, setLoader] = useState(false);
 
-    const { data} = FetchDataAPI("https://restcountries.eu/rest/v2/all", setLoader);
+  const { data} = FetchDataAPI("https://restcountries.eu/rest/v2/all", setLoader);
     console.log(data);
-
 
     return (
         <>
