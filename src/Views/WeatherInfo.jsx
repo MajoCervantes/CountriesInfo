@@ -12,6 +12,7 @@ import Loader from './Loader';
 //Hooks
 import FetchDataAPI from '../Hooks/FetchDataAPI';
 
+
 const WeatherInfo = () => {
     const capital = useParams();
     const [weatherData, setWeatherData] = useState(null);
@@ -20,6 +21,7 @@ const WeatherInfo = () => {
 
     const { data} = FetchDataAPI(`https://restcountries.eu/rest/v2/capital/${capital.capital}`, setLoader);
 
+    useEffect(() => {
     const handleFetchWeatherAPI = async () => {
         const key = `e1c652e014cb934943f2771b6f55628e`
         try {
@@ -31,10 +33,12 @@ const WeatherInfo = () => {
           console.log(error);
         }
       };
+      handleFetchWeatherAPI()
+    }, [capital.capital]);
 
-      useEffect(() => {
-        handleFetchWeatherAPI();
-      }, []);
+      // useEffect(() => {
+      //   handleFetchWeatherAPI();
+      // }, []);
     
     return (
        <>

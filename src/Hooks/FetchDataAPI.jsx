@@ -5,6 +5,7 @@ const FetchDataAPI = (url, setLoader) => {
   const [data, setData] = useState([]);
 
   //Consulta de API
+  useEffect(() => {
   const handleFetchAPI = async () => {
     setLoader(true);
     try {
@@ -20,10 +21,12 @@ const FetchDataAPI = (url, setLoader) => {
       console.log(error);
     }
   };
+  handleFetchAPI()
+}, [url, setLoader])
 
-  useEffect(() => {
-    handleFetchAPI();
-  }, [url]);
+  // useEffect(() => {
+  //   handleFetchAPI();
+  // }, [url]);
 
   return {data};
 };
