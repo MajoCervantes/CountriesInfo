@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Styles
-import LoaderStyles from "../Styles/LoaderStyles.css";
+import "../Styles/LoaderStyles.css";
 
 const Loader = () => {
     return (
