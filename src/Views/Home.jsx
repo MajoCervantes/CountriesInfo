@@ -1,35 +1,40 @@
-import React, {useState} from "react";
+import React, { useState } from "react"
 
 //CustomHook
-import FetchDataAPI from "../Hooks/FetchDataAPI";
+import FetchDataAPI from "../Hooks/FetchDataAPI"
 
 //Components
-import SearchForm from "../Components/Home/SearchForm";
-import AllCountries from "../Components/Home/AllCountries";
-import Loader from "./Loader";
-
+import SearchForm from "../Components/Home/SearchForm"
+import AllCountries from "../Components/Home/AllCountries"
+import Loader from "./Loader"
 
 const Home = () => {
-  const [loader, setLoader] = useState(false);
+	const [loader, setLoader] = useState(false)
 
-  const { data} = FetchDataAPI("https://restcountries.eu/rest/v2/all", setLoader);
-    console.log(data);
+	const { data } = FetchDataAPI(
+		"https://restcountries.com/v3.1/all",
+		setLoader
+	)
+	// console.log(data)
 
-    return (
-        <>
-        {loader ? <Loader /> :  ( <div>
-          <SearchForm/>
-          {data.map(Country => (
-            <AllCountries
-              key={Country.name}
-              flag={Country.flag}
-              name={Country.name}
-            />
-          ))}
-        </div> )}
-      
-        </>
-    );
-};
+	return (
+		<>
+			{loader ? (
+				<Loader />
+			) : (
+				<div>
+					<SearchForm />
+					{data.map((Country) => (
+						<AllCountries
+							key={Country.name.official}
+							flag={Country.flags.svg}
+							name={Country.name.common}
+						/>
+					))}
+				</div>
+			)}
+		</>
+	)
+}
 
-export default Home;
+export default Home
