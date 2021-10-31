@@ -154,7 +154,7 @@ const WeatherInfo = () => {
 						tempMin={weatherData.main.temp_min}
 						humidity={weatherData.main.humidity}
 						windSpeed={weatherData.wind.speed}
-						flag={data[0].flags.svg}
+						flag={data[0].flags.png}
 					/>{" "}
 				</div>
 			) : (

@@ -15,7 +15,7 @@ const Home = () => {
 		"https://restcountries.com/v3.1/all",
 		setLoader
 	)
-	// console.log(data)
+	console.log(data)
 
 	return (
 		<>
@@ -27,7 +27,7 @@ const Home = () => {
 					{data.map((Country) => (
 						<AllCountries
 							key={Country.name.official}
-							flag={Country.flags.svg}
+							flag={Country.flags.png}
 							name={Country.name.common}
 						/>
 					))}

@@ -29,7 +29,7 @@ const CityInfo = () => {
 					{data.map((city) => (
 						<SingleCity
 							key={city.name.official}
-							flag={city.flags.svg}
+							flag={city.flags.png}
 							name={city.name.common}
 							capital={city.capital}
 							region={city.region}
